@@ -30,6 +30,7 @@ Esta organização centraliza projetos de tecnologia, IA, documentação e autom
 | Apps | [`detran-apps`](https://github.com/Detran-RJ/detran-apps) | Monorepo de aplicativos DETRAN-RJ: contratos, wiki e ferramentas DTIC |
 | IA | [`detran-ai`](https://github.com/Detran-RJ/detran-ai) | Agentes Prometheus e Atlas para processos, patrimônio e conhecimento institucional |
 | Infra | [`detran-infra`](https://github.com/Detran-RJ/detran-infra) | Infraestrutura, CI, governança, dev-env e identidade visual |
+| Conhecimento | [`knowledge-base`](https://github.com/Detran-RJ/knowledge-base) | Vault Obsidian privado, governança e futura wiki interna DTIC |
 
 ## Mapa operacional
 
