@@ -1,12 +1,9 @@
 <!--
   README institucional da organização Detran-RJ no GitHub.
-  Caminho de destino: github.com/Detran-RJ/.github → /profile/README.md
-  Este arquivo é renderizado automaticamente em github.com/Detran-RJ
+  Renderizado automaticamente em github.com/Detran-RJ
 -->
 
 <div align="center">
-
-<img src="https://raw.githubusercontent.com/Detran-RJ/.github/main/profile/assets/logo-detran-rj.png" alt="DETRAN-RJ" width="420"/>
 
 # DTIC — Departamento de Tecnologia da Informação e Comunicação
 
@@ -16,7 +13,7 @@
 
 **Tecnologia pública, transparente e a serviço do cidadão fluminense.**
 
-[Site oficial](https://www.detran.rj.gov.br) · [Serviços](https://www.detran.rj.gov.br/_servico/) · [Imprensa](https://www.detran.rj.gov.br/_inst/imprensa/) · [Ouvidoria](https://www.detran.rj.gov.br/_inst/ouvidoria/)
+[Site oficial](https://www.detran.rj.gov.br) · [Serviços](https://www.detran.rj.gov.br/_servico/) · [Ouvidoria](https://www.detran.rj.gov.br/_inst/ouvidoria/)
 
 </div>
 
@@ -24,53 +21,98 @@
 
 ## Quem somos
 
-A **DTIC/Detran-RJ** é a unidade responsável pela estratégia, desenvolvimento e operação dos sistemas de tecnologia da informação e comunicação que sustentam os serviços do Departamento de Trânsito do Estado do Rio de Janeiro.
+A **DTIC/Detran-RJ** é a unidade responsável pela estratégia, desenvolvimento e operação dos sistemas de TI que sustentam os serviços do Detran-RJ, atendendo **4.000+ servidores** e milhões de cidadãos fluminenses.
 
-Esta organização no GitHub reúne os projetos, ferramentas e iniciativas de software produzidos e mantidos pelo DTIC e por equipes parceiras a serviço do Detran-RJ.
+---
 
-## O que você encontra aqui
+## Mapa de Sistemas
 
-- **Aplicações internas e públicas** — sistemas que apoiam a operação do órgão.
-- **Bibliotecas e SDKs** — componentes reutilizáveis em diferentes projetos.
-- **Automação e integrações** — bots, jobs e integrações com SEI, gov.br e outros sistemas estaduais.
-- **Documentação técnica** — arquitetura, padrões, decisões de engenharia.
-
-## Stack institucional
-
-```text
-Linguagens   ▸ TypeScript · Python · Node.js
-Frontend     ▸ React · Next.js · Tailwind CSS
-Backend      ▸ Node.js · FastAPI · PostgreSQL · Redis
-Infra        ▸ Docker · GitHub Actions · Linux
-Padrões      ▸ Clean Architecture · API REST · OpenAPI
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        DTIC / DETRAN-RJ                                  │
+├───────────────────┬─────────────────────┬───────────────────────────────┤
+│  🏢 PATRIMÔNIO    │  📋 SEI / CONTRATOS │  🤖 AI / KNOWLEDGE           │
+│                   │                     │                               │
+│  patrimonio-web   │  contratos-app      │  detran-ai (Prometheus+Atlas) │
+│  patrimonio-api   │  servagc            │  wiki-app + wiki-vault        │
+│  detran-pat       │  sei-pipeline       │  chatbot-detran-rj            │
+│                   │  sei-dirtic/divit   │  atlas-detran-rag             │
+├───────────────────┼─────────────────────┼───────────────────────────────┤
+│  🎓 CAPACITAÇÃO   │  ⚙️ INFRA / CI      │  📐 GOVERNANÇA               │
+│                   │                     │                               │
+│  detran-academy   │  ci-workflows       │  governanca-docs              │
+│  assistente-sei   │  dev-environment    │  identidade-visual            │
+│                   │  .github            │                               │
+└───────────────────┴─────────────────────┴───────────────────────────────┘
 ```
 
-## Princípios
+---
 
-1. **Cidadão no centro** — cada release deve gerar valor mensurável para quem usa o serviço.
-2. **Transparência por padrão** — código aberto sempre que a Lei Geral de Proteção de Dados e a segurança permitirem.
-3. **Kaizen** — melhoria contínua, incremental, documentada.
-4. **Reuso antes de reinventar** — pesquisamos OSS e referências do governo digital antes de codar do zero.
-5. **Acessibilidade e LGPD** — não negociáveis em qualquer entrega pública.
+## Projetos Ativos
 
-## Como contribuir
+### 🤖 Inteligência Artificial
 
-- 🐛 **Achou um bug ou tem uma sugestão?** Abra uma issue no repositório correspondente.
-- 🛠️ **Quer contribuir com código?** Veja [CONTRIBUTING.md](./CONTRIBUTING.md) e [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
-- 🔒 **Encontrou uma vulnerabilidade?** Siga o processo descrito em [SECURITY.md](./SECURITY.md). **Não abra issue pública.**
+| Projeto | Descrição | Stack |
+|---------|-----------|-------|
+| [**detran-ai**](https://github.com/Detran-RJ/detran-ai) | Agentes Prometheus (SEI) e Atlas (Patrimônio) — processamento inteligente de documentos | Python · LangGraph · FastAPI · Qdrant |
+| [**detran-wiki-app**](https://github.com/Detran-RJ/detran-wiki-app) | Busca semântica + chat sobre legislação e serviços do Detran-RJ | React · Node · ChromaDB |
+| [**chatbot-detran-rj**](https://github.com/Detran-RJ/chatbot-detran-rj) | Chatbot humanizado com RAG para atendimento | Python · LangGraph · LoRA |
+| [**atlas-detran-rag**](https://github.com/Detran-RJ/atlas-detran-rag) | Pipeline RAG para base de conhecimento institucional | Python · LangGraph |
 
-## Contato
+### 🏢 Sistemas de Gestão
 
-| Canal | Endereço |
-|---|---|
-| Site | https://www.detran.rj.gov.br |
-| Email DTIC | moises.costa@detran.rj.gov.br |
-| Ouvidoria | https://www.detran.rj.gov.br/_inst/ouvidoria/ |
+| Projeto | Descrição | Stack |
+|---------|-----------|-------|
+| [**detran-patrimonio-web**](https://github.com/Detran-RJ/detran-patrimonio-web) | Sistema de Patrimônio DPAT — RBAC, OCR, levantamento multi-modal | React 19 · tRPC · Drizzle · MySQL |
+| [**detran-patrimonio-api**](https://github.com/Detran-RJ/detran-patrimonio-api) | API REST do Sistema de Patrimônio | NestJS · Prisma · Docker |
+| [**detran-contratos-app**](https://github.com/Detran-RJ/detran-contratos-app) | Gestão de contratos DTIC com integração SEI | React · tRPC · Drizzle · Tailwind |
+| [**servagc**](https://github.com/Detran-RJ/servagc) | Pipeline central de documentação SEI | HTML · dados estruturados |
+
+### 🎓 Capacitação
+
+| Projeto | Descrição | Stack |
+|---------|-----------|-------|
+| [**detran-academy**](https://github.com/Detran-RJ/detran-academy) | LMS interno — vídeo-aulas e tutor IA para servidores | pnpm · Turbo · Supabase |
+| [**assistente-sei**](https://github.com/Detran-RJ/assistente-sei) | Análise assistida de processos SEI | Python · Streamlit |
+
+### ⚙️ Infraestrutura
+
+| Projeto | Descrição | Stack |
+|---------|-----------|-------|
+| [**detran-ci-workflows**](https://github.com/Detran-RJ/detran-ci-workflows) | Workflows GitHub Actions reutilizáveis (node, python, php, codeql, deploy) | YAML |
+| [**detran-governanca-docs**](https://github.com/Detran-RJ/detran-governanca-docs) | Governança, auditorias, runbooks e infra da org | Markdown · Shell |
+| [**wiki-detran-rj**](https://github.com/Detran-RJ/wiki-detran-rj) | Base de conhecimento — 165 notas, 18 MOCs | Obsidian (Markdown) |
+
+---
+
+## Convenções
+
+| Item | Padrão |
+|------|--------|
+| Naming | `detran-<domínio>-<tipo>` |
+| Commits | [Conventional Commits](https://www.conventionalcommits.org/) em português |
+| Branches | `main`, `feat/*`, `fix/*`, `docs/*` |
+| CI | Workflows reutilizáveis em [`detran-ci-workflows`](https://github.com/Detran-RJ/detran-ci-workflows) |
+| Deploy | GitHub Actions → SSH → VPS (Docker Compose) |
+
+---
+
+## Stack Tecnológica
+
+```
+Frontend:   React · TypeScript · Tailwind CSS · Vite
+Backend:    FastAPI · NestJS · tRPC · Node.js
+AI/ML:      LangGraph · LangChain · Qdrant · ChromaDB
+Database:   PostgreSQL · MySQL · SQLite · Supabase
+Infra:      Docker · GitHub Actions · Caddy · VPS
+```
 
 ---
 
 <div align="center">
 
-<sub>Identidade visual conforme Manual oficial DETRAN-RJ. © Governo do Estado do Rio de Janeiro.</sub>
+**🏛️ Governo do Estado do Rio de Janeiro**
+
+*Desenvolvido pela DTIC/Detran-RJ*
 
 </div>
