@@ -4,11 +4,25 @@ Este diretório reúne skills/padrões operacionais para agentes humanos e de IA
 
 ## Skills
 
-- [`detran-vercel.md`](./detran-vercel.md): operação segura de Vercel.
-- [`detran-huggingface.md`](./detran-huggingface.md): Spaces/datasets/modelos no Hugging Face.
-- [`detran-seguranca.md`](./detran-seguranca.md): segurança, LGPD e resposta a incidente.
-- [`detran-sei.md`](./detran-sei.md): regras para SEI/pipeline/documentos.
+| Skill | Arquivo | Finalidade |
+|---|---|---|
+| detran-vercel | [`detran-vercel.md`](./detran-vercel.md) | Deploy e gestão de projetos no Vercel (ambientes, domínios, variáveis de ambiente, rollback) |
+| detran-huggingface | [`detran-huggingface.md`](./detran-huggingface.md) | Spaces, datasets e modelos no Hugging Face; publicação e versionamento |
+| detran-seguranca | [`detran-seguranca.md`](./detran-seguranca.md) | Segurança, conformidade com LGPD e resposta a incidentes |
+| detran-sei | [`detran-sei.md`](./detran-sei.md) | Processamento de documentos SEI, regras de pipeline e automações |
 
 ## Regra global
 
-Privado por padrão. Público somente se for sintético, aprovado e sem dados sensíveis.
+Skills **não contêm credenciais reais** (tokens, senhas, chaves de API). Qualquer exemplo deve usar valores fictícios ou variáveis de ambiente.
+
+## Revisão periódica
+
+As skills devem ser revisadas **trimestralmente** (a cada 3 meses) para garantir alinhamento com:
+
+- Mudanças nas plataformas (Vercel, Hugging Face, SEI)
+- Atualizações na política de segurança e LGPD do Detran-RJ
+- Novas práticas adotadas pela organização
+
+Responsável pela revisão: mantenedor(a) do repositório `.github`.
+
+Registro de revisões: atualizar a data no topo de cada arquivo de skill revisado.
