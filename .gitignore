@@ -1,0 +1,4 @@
+# --- WSO env guard ---
+.env
+.env.local
+.env.*.local
