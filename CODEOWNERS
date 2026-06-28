@@ -1,0 +1,67 @@
+# CODEOWNERS para Detran-RJ
+# Convenção: cada área do Detran tem 1+ owners para auto-assignment de PRs
+# Atualizar quando times mudarem.
+#
+# Formato: pattern @owner1 @owner2
+# Ver https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default fallback (repositórios sem owner específico)
+*                          @moises-costa-rj
+
+# === Apps principais ===
+
+# Portal (agregador de apps)
+detran-rj-portal/          @moises-costa-rj
+detran-rj-portal/portal/    @moises-costa-rj
+detran-rj-portal/guardian/  @moises-costa-rj
+detran-rj-portal/pat/       @moises-costa-rj
+detran-rj-portal/prd/      @moises-costa-rj
+detran-rj-portal/sei/      @moises-costa-rj
+detran-rj-portal/task/     @moises-costa-rj
+detran-rj-portal/wiki/     @moises-costa-rj
+detran-rj-portal/academy/  @moises-costa-rj
+
+# Apps standalone
+detran-rj-tarefas/         @moises-costa-rj
+detran-rj-wiki/            @moises-costa-rj
+detran-rj-academia/        @moises-costa-rj
+detran-rj-academia-dtic/   @moises-costa-rj
+detran-rj-mcp/             @moises-costa-rj
+detran-rj-identidade-permissoes/  @moises-costa-rj
+detran-rj-patrimonio-legado/      @moises-costa-rj
+portal-detran/             @moises-costa-rj
+
+# === Áreas críticas (review extra) ===
+
+# Auth/SSO (Identity & Permissions)
+/detran-rj-identidade-permissoes/  @moises-costa-rj
+/detran-rj-mcp/                     @moises-costa-rj
+
+# Patrimônio (RAG, dados reais)
+/detran-rj-patrimonio-legado/      @moises-costa-rj
+/detran-rj-portal/pat/             @moises-costa-rj
+
+# === Documentação ===
+
+/documentacao-patrimonio/  @moises-costa-rj
+
+# === Configuração e tooling ===
+
+# Workflows de CI
+/.github/workflows/        @moises-costa-rj
+
+# Configs compartilhados (eslint, prettier, tsconfig)
+/.eslintrc.cjs              @moises-costa-rj
+/.prettierrc.json           @moises-costa-rj
+/tsconfig.json              @moises-costa-rj
+/pnpm-workspace.yaml        @moises-costa-rj
+
+# Documentação de arquitetura (vault Alexandria)
+/knowledge/                 @moises-costa-rj
+
+# === Infra ===
+
+# Docker/compose
+/docker-compose*.yml       @moises-costa-rj
+/Dockerfile                 @moises-costa-rj
+/infra/                     @moises-costa-rj
