@@ -27,30 +27,51 @@ A organização `Detran-RJ` centraliza projetos, documentação e automações r
 - IA institucional privada;
 - documentação técnica e operacional.
 
+Os repositórios da organização são **privados por padrão** — este perfil e os templates organizacionais são a única parte pública.
+
 ## Projetos ativos
+
+O repositório canônico da organização é o [`detran-rj-portal`](https://github.com/Detran-RJ/detran-rj-portal): portal único com SSO centralizado (Guardian) e agregador de apps, organizado como monorepo de microserviços. Os apps internos independentes estão sendo absorvidos por ele em uma migração gradual (padrão strangler).
 
 | Domínio | Projeto | Descrição |
 |---|---|---|
-| Patrimônio | [`detran-patrimonio`](https://github.com/Detran-RJ/detran-patrimonio) | Sistema de patrimônio DTIC/DETRAN com dashboard, chatbot e levantamento 2026 |
-| SEI | [`detran-sei`](https://github.com/Detran-RJ/detran-sei) | Monorepo SEI: pipeline e bundles por setor/funcionário/processo |
-| SEI | [`detran-sei-pipeline`](https://github.com/Detran-RJ/detran-sei-pipeline) | Pipeline sanitizado para extração, validação, metadados e documentação operacional |
-| Apps | [`detran-apps`](https://github.com/Detran-RJ/detran-apps) | Monorepo de aplicativos DETRAN-RJ: contratos, wiki e ferramentas DTIC |
-| IA | [`detran-ai`](https://github.com/Detran-RJ/detran-ai) | Agentes Prometheus e Atlas para processos, patrimônio e conhecimento institucional |
-| Infra | [`detran-infra`](https://github.com/Detran-RJ/detran-infra) | Infraestrutura, CI reutilizável, governança, dev-env e políticas de publicação |
-| Conhecimento | [`knowledge-base`](https://github.com/Detran-RJ/knowledge-base) | Vault Obsidian privado, governança e futura wiki interna DTIC |
-| Organização | [`.github`](https://github.com/Detran-RJ/.github) | Perfil público, templates, segurança e skills operacionais |
+| Portal | [`detran-rj-portal`](https://github.com/Detran-RJ/detran-rj-portal) | Portal único — SSO centralizado (Guardian) + agregador de apps; monorepo de microserviços (PAT, Guardian, Wiki, Academy, Task) |
+| Tarefas | [`detran-rj-tarefas`](https://github.com/Detran-RJ/detran-rj-tarefas) | Task — Kanban de controle de tarefas e projetos (em absorção pelo portal) |
+| Capacitação | [`detran-rj-academia-dtic`](https://github.com/Detran-RJ/detran-rj-academia-dtic) | Detran Academy — plataforma de capacitação interna da DTIC (em absorção pelo portal) |
+| Segurança | [`detran-rj-identidade-permissoes`](https://github.com/Detran-RJ/detran-rj-identidade-permissoes) | Gestão de segurança da informação — permissões, acessos, VPNs e senhas críticas (em absorção pelo portal) |
+| Patrimônio | [`sistema-patrimonio`](https://github.com/Detran-RJ/sistema-patrimonio) | Sistema de Gestão Patrimonial — React 19 + tRPC 11 + Drizzle (em transição; será arquivado após a migração dos sprints) |
+| Patrimônio | [`detran-rj-patrimonio-mcp`](https://github.com/Detran-RJ/detran-rj-patrimonio-mcp) | Servidor MCP read-only do patrimônio DIRTIC (ferramentas aterradas para agentes) |
+| Patrimônio | [`documentacao-patrimonio`](https://github.com/Detran-RJ/documentacao-patrimonio) | Documentação do sistema de patrimônio (requisitos, atas) |
+| Conhecimento | [`detran-rj-wiki`](https://github.com/Detran-RJ/detran-rj-wiki) | Base de conhecimento (fontes públicas) pronta para Wiki.js com storage Git |
+| Dados | [`dirtic-dados-organizacionais`](https://github.com/Detran-RJ/dirtic-dados-organizacionais) | Dados organizacionais consolidados da DIRTIC + seed do Guardian |
+| IA | [`detran-rj-mcp`](https://github.com/Detran-RJ/detran-rj-mcp) | Servidor MCP do Detran-RJ (família `msc-mcp-core`) |
+| Organização | [`.github`](https://github.com/Detran-RJ/.github) | Perfil público, templates, segurança e configuração organizacional |
 
 ## Mapa operacional
 
 ```text
 DTIC / DETRAN-RJ
-├─ Patrimônio       → detran-patrimonio
-├─ SEI              → detran-sei + detran-sei-pipeline
-├─ Contratos/Apps   → detran-apps
-├─ IA institucional → detran-ai
-├─ Infra/Governança → detran-infra + .github
-└─ Conhecimento     → knowledge-base
+├─ Portal único     → detran-rj-portal (canônico; absorve os apps abaixo)
+│   ├─ Tarefas      → detran-rj-tarefas
+│   ├─ Academy      → detran-rj-academia-dtic
+│   └─ Guardian     → detran-rj-identidade-permissoes
+├─ Patrimônio       → sistema-patrimonio + detran-rj-patrimonio-mcp + documentacao-patrimonio
+├─ Conhecimento     → detran-rj-wiki
+├─ Dados            → dirtic-dados-organizacionais
+├─ IA / agentes     → detran-rj-mcp
+└─ Governança       → .github
 ```
+
+Mapa completo (incluindo arquivados): [`REPO_MAP.md`](../REPO_MAP.md)
+
+## Repositórios arquivados
+
+| Repo | Motivo |
+|---|---|
+| `portal-detran` | Antecessor do `detran-rj-portal` (infraestrutura, documentação e planejamento) |
+| `detran-rj-academia` | Educação formal; substituído — mantido como snapshot histórico |
+| `detran-rj-patrimonio-legado` | Pat-detran, sistema de patrimônio legado |
+| `dashboard-patrimonio-dirtic` | Dashboard de visualização dos dados patrimoniais (export Manus) |
 
 ## Convenções
 
