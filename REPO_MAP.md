@@ -59,4 +59,4 @@ Parte do trabalho relacionado ao Detran vive na organização `Msc-Company-Org` 
 
 - [`docs/credenciais.md`](./docs/credenciais.md)
 - [`docs/config/organizacao.md`](./docs/config/organizacao.md)
-- [`docs/skills/`](./docs/skills/)
+- [`docs/skills/README.md`](./docs/skills/README.md)

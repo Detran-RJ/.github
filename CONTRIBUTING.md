@@ -67,13 +67,16 @@ Exemplos:
 
 ## Setup local
 
-Cada repo tem seu próprio guia em `README.md`. Em geral:
+Os comandos abaixo são exemplos, não uma receita universal. Consulte o `README.md` e os arquivos de configuração do repositório-alvo; execute somente as etapas compatíveis com a stack e com os arquivos existentes nele.
 
 ```bash
 git clone https://github.com/Detran-RJ/<repo>.git
 cd <repo>
+# Somente se .env.example existir e o README do projeto pedir:
 cp .env.example .env
+# Somente se o projeto usar npm:
 npm install
+# Somente se package.json definir o script dev:
 npm run dev
 ```
 
